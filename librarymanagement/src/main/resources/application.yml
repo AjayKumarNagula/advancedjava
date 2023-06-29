@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    hibernate.ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/javalibrary
+    username: root
+    password: password
+  profiles:
+    active:
+      test,dev,prod
+
+---
+Spring:
+  message: Welcome to the test environment
+Server:
+  port: 8084
+
+---
+Spring:
+  message: Welcome to the dev environment
+Server:
+  port: 8085
+
+---
+Spring:
+  message: Welcome to the prod environment
+Server:
+  port: 8086
