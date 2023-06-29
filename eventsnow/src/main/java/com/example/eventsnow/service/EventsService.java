@@ -37,12 +37,12 @@ public class EventsService {
         return updatedEvent;
     }
 
-    public Event updateSpecificData(Integer id, String eventName){
+    public Event updateSpecificData(Integer id, Event event){
         Event oldEvent = this.eventsRepository.findById(id).get();
 
-        oldEvent.setEventName(eventName);
+        oldEvent.setEventName(event.getEventName());
         this.eventsRepository.save(oldEvent);
-        return oldEvent;
+        return event;
     }
 }
 

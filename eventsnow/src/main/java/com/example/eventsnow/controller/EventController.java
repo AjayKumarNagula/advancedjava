@@ -33,8 +33,8 @@ public class EventController {
         return this.eventsService.updateEvent(myId,modifiedEvent);
     }
     @PatchMapping("/{id}")
-    public Event updateSpecificData(@PathVariable Integer id,@RequestParam String event){
-        return this.eventsService.updateSpecificData(id,event);
+    public Event updateSpecificData(@PathVariable Integer id,@RequestParam Event eventName){
+        return this.eventsService.updateSpecificData(id, eventName);
     }
 
 
